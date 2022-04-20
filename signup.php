@@ -44,6 +44,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <link rel="icon" href="images/fav.png" type="image/x-icon">
 </head>
 <body>
     
@@ -59,20 +60,20 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
                     ?>
                     <div class="input-field" style="margin-top: 30px;">
                         <i class="fa fa-user"></i>
-                        <input type="email" name="email" class="inp" placeholder="Enter your email">
+                        <input type="email" name="email" class="inp" placeholder="Enter your email" required>
                     </div>
                     
                     <div class="input-field">
                         <i class="fa fa-lock"></i>
-                        <input type="password" name="password" class="inp" placeholder="Enter your password">
+                        <input type="password" name="password" class="inp" placeholder="Enter your password" required>
                     </div>
                     <div class="input-field">
                         <i class="fa fa-lock"></i>
-                        <input type="password" name="cpassword" class="inp" placeholder="Confirm Password">
+                        <input type="password" name="cpassword" class="inp" placeholder="Confirm Password" required>
                     </div>
                     <span style="font-size: 16px; "><input type="checkbox" id="check"><label for="check" style="cursor: pointer;position:relative;bottom:3px;"> I agree terms and condition</label></span>
                    <br><br><button type="submit" class="btn color-brown" style="margin-bottom: 10px;">Register</button><p align="center">OR</p>
-                    <button type="button" class="btn color-white" href="login.php">Login</button>
+                    <button type="button" class="btn color-white" onclick="location.href='login.php';">Login</button>
                 </div>
             </form>
             

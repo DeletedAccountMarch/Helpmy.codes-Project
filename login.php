@@ -62,6 +62,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 <head>
     <title>Login to your account | Help my codes</title>
     
+    <link rel="icon" href="images/fav.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
  
 </head>
@@ -92,7 +93,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
                     </div>
                     <span style="font-size: 16px; "><input type="checkbox" id="check"><label for="check" style="cursor: pointer;position:relative;bottom:3px;"> Remember Me</label></span>
                    <br><br><button class="btn color-brown" style="margin-bottom: 10px;" type="submit">Login</button><p align="center">OR</p>
-                    <button type="button" class="btn color-white" onclick="location.href='https://google.com';">Register</button>
+                    <button type="button" class="btn color-white" onclick="location.href='signup.php';">Register</button>
                 </div>
             </form>
             

@@ -1,5 +1,5 @@
-CREATE DATABASE user;
-USE user;
+CREATE DATABASE helpmycode;
+USE helpmycode;
 
 CREATE TABLE account
 ( user_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,

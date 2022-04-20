@@ -7,12 +7,11 @@
     <link rel="icon" href="images/fav.png" type="image/x-icon">
 </head>
 <nav>
-    <div class="logo"><a href="index.php">HelpMy  </a><img src="images/fav.png" height="50" width="50" alt=""></div>
+    <div class="logo"><a href="./">HelpMy  </a><img src="images/fav.png" height="50" width="50" alt=""></div>
     <i class="fa fa-bars icon" class="icon" id="click" onclick="show()"></i>
     <ul id="menu-bar">
-        <li class="list"><a class="link" href="welcome.php">Home</a></li>
-        <li class="list"><a class="link" href="#">Bug Finder</a></li>
-        <li class="list"><a class="link" href="#">Contact</a></li>
+        <li class="list"><a class="link" href="./">Home</a></li>
+        <li class="list"><a class="link" href="findbug.php">Bug Finder</a></li>
         <?php if(session_status()==1){
             
             echo '<li class="list"><a href="login.php" class="link auth-btn left-size">Login</a></li>

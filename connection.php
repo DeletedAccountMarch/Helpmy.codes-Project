@@ -1,9 +1,10 @@
 <?php
 
+    //For Local
     $server = "localhost";
     $username = "root";
     $password = "";
-    $database="myuser";
+    $database="helpmycode";
 
     $conn = mysqli_connect($server,$username,$password,$database);
 
