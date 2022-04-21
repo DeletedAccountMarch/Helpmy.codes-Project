@@ -7,7 +7,7 @@
     $database="helpmycode";
 
     $conn = mysqli_connect($server,$username,$password,$database);
-
+    
     if(!$conn){
         die("connection failed");
     }

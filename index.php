@@ -30,7 +30,15 @@
 
     <br>
 
-    <center><textarea name="code" id="code" placeholder="Enter your C++ source code here.. " rows="15" cols="100%" style="padding:10px;font-size:18px"></textarea></center>
+    <center><textarea name="code" id="code" placeholder="Enter your C++ source code here.. " rows="15" cols="100%" style="padding:10px;font-size:18px">// Your First C++ Program
+
+#include <iostream>
+int main() {
+    std::cout << "Hello World!";
+    return 0;
+}</textarea></center>
+    <center><textarea name="input" id="input" placeholder="Enter input here.. " rows="4" cols="40%" style="padding:10px;font-size:18px"></textarea></center>
+    
     <center><button onclick="runcode();" style="cursor:pointer;padding:5px;display:flex;align-content:center;text-decoration:none;justify-content:space-around;background:brown;color:white;width:50%;">Run code</button>
 </center>
 
@@ -55,7 +63,8 @@
 
             document.getElementById('myoutput').setAttribute("class","show");
             
-            $codevalue= document.getElementById('code').value;
+            $codevalue= encodeURIComponent(document.getElementById('code').value);
+            $input = document.getElementById('input').value;
             const xhr = new XMLHttpRequest();
 
             xhr.onload = function(){
@@ -63,9 +72,10 @@
             serverResponse.innerHTML = this.responseText;
             };
 
+            console.log($codevalue);
             xhr.open("POST","runcode.php");
             xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-            xhr.send("code="+$codevalue);
+            xhr.send("code="+$codevalue+"&input="+$input);
         } 
 
         

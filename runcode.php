@@ -1,6 +1,8 @@
 <?php
 
+putenv("PATH=C:\TDM-GCC-32\bin");
 $code = $_POST['code'];
+$input = $_POST['input'];
 
 if($_SERVER['REQUEST_METHOD'] == "POST")
 {
@@ -9,7 +11,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 
 	$filename = $_SERVER['DOCUMENT_ROOT'] . "/code/" . $md5hash . ".cpp";	
 	$filexe= $_SERVER['DOCUMENT_ROOT'] . "/code/" . $md5hash . ".exe";
-
+	$inputtxt= $_SERVER['DOCUMENT_ROOT'] . "/code/" . $md5hash . ".txt";
 	$dir = $_SERVER['DOCUMENT_ROOT'] . '/code';
 	
 
@@ -20,16 +22,26 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
  	}
 
 	$myfile = fopen($filename,"w") or die("Unable to open file!");
+	$inputfile = fopen($inputtxt,"w") or die("Unable to open file!");
 	fwrite($myfile,$code);	//Store the user submitted code into a file
+	fwrite($inputfile,$input);
 	fclose($myfile);
 
-	$command1 = "C:\TDM-GCC-32\bin\g++ " . $filename . " -o ". $filexe;
-	$output1 = shell_exec($command1 . " 2>&1");	
-	$output = shell_exec($filexe . " 2>&1");	
-	
+	if(trim($input=="")){
+		$command1 = "C:\TDM-GCC-32\bin\g++ " . $filename . " -o ". $filexe;
+		$output1 = shell_exec($command1 . " 2>&1");	
+		$output = shell_exec($filexe . " 2>&1");
+	}
+	else{
+
+		$command1 = "C:\TDM-GCC-32\bin\g++ " . $filename . " -o ". $filexe;
+		$output1 = shell_exec($command1 . " 2>&1");	
+		$output = shell_exec($filexe . " < ". $inputtxt . " 2>&1");
+
+	}
+
 	if(empty($output1)){	
 		echo $output;
 	}else echo $output1;
 }
-
 ?>
