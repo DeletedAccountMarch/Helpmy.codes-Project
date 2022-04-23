@@ -11,3 +11,15 @@ CREATE TABLE account
   CONSTRAINT emaildata UNIQUE (email)
  
 );
+
+Create Table codes (
+
+    codes_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    user_id int,
+    codes varchar(5000) NOT NULL,
+    out_status int NOT NULL,
+
+    out_date datetime default now(),
+    FOREIGN KEY (user_id) REFERENCES account(user_id)
+
+);

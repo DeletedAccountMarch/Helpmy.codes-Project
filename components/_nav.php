@@ -11,7 +11,7 @@
     <i class="fa fa-bars icon" class="icon" id="click" onclick="show()"></i>
     <ul id="menu-bar">
         <li class="list"><a class="link" href="./">Home</a></li>
-        <li class="list"><a class="link" href="findbug.php">Bug Finder</a></li>
+        <li class="list"><a class="link" href="compile.php">Compile C++</a></li>
         <?php if(session_status()==1){
             
             echo '<li class="list"><a href="login.php" class="link auth-btn left-size">Login</a></li>
