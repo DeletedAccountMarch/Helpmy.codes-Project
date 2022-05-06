@@ -1,6 +1,6 @@
 <?php
 
-putenv("PATH=C:\TDM-GCC-32\bin");
+putenv("PATH=C:\TDM-GCC-64\bin");
 $code = $_POST['code'];
 $input = $_POST['input'];
 
@@ -28,13 +28,13 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 	fclose($myfile);
 
 	if(trim($input=="")){
-		$command1 = "C:\TDM-GCC-32\bin\g++ " . $filename . " -o ". $filexe;
+		$command1 = "C:\TDM-GCC-64\bin\g++ " . $filename . " -o ". $filexe;
 		$output1 = shell_exec($command1 . " 2>&1");	
 		$output = shell_exec($filexe . " 2>&1");
 	}
 	else{
 
-		$command1 = "C:\TDM-GCC-32\bin\g++ " . $filename . " -o ". $filexe;
+		$command1 = "C:\TDM-GCC-64\bin\g++ " . $filename . " -o ". $filexe;
 		$output1 = shell_exec($command1 . " 2>&1");	
 		$output = shell_exec($filexe . " < ". $inputtxt . " 2>&1");
 

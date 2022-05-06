@@ -22,9 +22,10 @@
     <?php include 'components/_nav.php' ?>
 
     <?php include 'carosel/index.php' ?>
-
-  
-    
+<br>
+  	<center><h1 class="indextext">Helping you to compile your c++ codes</h1>
+  		<br>
+    <a href="compile.php" class="link auth-btn2" style="background:black;">Compile C++ Code </a></center><br><br><br>
     <?php include 'components/_footer.php' ?>
 
 

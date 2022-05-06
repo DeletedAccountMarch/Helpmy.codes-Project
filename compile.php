@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compile Your C++ Code</title>
+    
+    <link rel="icon" href="images/fav.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/compiler.css">
 </head>
 
@@ -18,7 +20,7 @@
                 <div class="options">
                     <button class="run_btn lefttop" onclick="findcin()" type="button">Run Code</button>
                     <button class="run_btn lefttop" id="copy" onclick="func_copy()">Copy Code</button>
-                    <button class="run_btn righttop" onclick="clear_code()">Clear Code</button>
+                    <button class="run_btn righttop" id="clear" onclick="clear_code()">Clear Code</button>
 
                 </div>
 
@@ -47,7 +49,8 @@ int main() {
             </div>
 
         </div>
-
+<div class="divclear"></div>
+<br><br>
     <?php include 'components/_footer.php' ?>
 
     <script src="js/compile.js"></script>

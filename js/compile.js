@@ -1,6 +1,7 @@
-var c = 0;
+var c=0;
 
 function findcin() {
+    c=0;
     document.getElementById('first_text').setAttribute("class", "hide");
     document.getElementById('entervalue').innerHTML ="";
     document.getElementById('dis').setAttribute("class", "hide");
@@ -15,7 +16,6 @@ function findcin() {
 
     var inputlen = input.length;
     var m = 0;
-    var c = 0;
     var j;
     for (var i = 0; i < inputlen; i++) {
 
@@ -64,7 +64,6 @@ function findcin() {
         }
 
     } else {
-
         runcode(value);
     }
 }
@@ -72,10 +71,12 @@ function findcin() {
 function sendinput(){
     document.getElementById('first_text').setAttribute("class", "hide");
     var inputvalue=" ";
+    console.log(c);
         for(i=1;i<=c;i++){
             inputvalue = inputvalue + " " + document.getElementById('field' + i).value;
         }
         inputvalue = inputvalue.replace(/  +/g, ' ');
+        
         runcode(inputvalue);
 }
 
@@ -110,4 +111,5 @@ function clear_code() {
     var clearText = document.getElementById("code");
     clearText.select();
     document.getElementById('code').value="";
+
 }

@@ -34,21 +34,19 @@
     opacity: 0.4;
 }
 
-.caption{
+.divtext{
     position: absolute;
     top:30%;
     text-align: center;
     width: 100%;
+}
+.caption{
     color:pink;
     font-size: 45px;
     font-weight: 800;
 }
 
 #desc{
-    position: absolute;
-    top:45%;
-    text-align: center;
-    width: 100%;
     font-size: 25px;
     color:white;
     font-weight: 800;
@@ -78,5 +76,20 @@
     .container{
         height: 40vh;
     }
+
+    .caption{
+        font-size: 25px;
+    }
+    .desc{
+        font-size: 15px;
+    }
     
+    .arrow{
+        font-size: 20px;
+        padding: 3px 10px;
+        text-align: center;
+        width: 15px;
+        font-weight: 800;
+        border-radius: 70%;
+    }
 }
