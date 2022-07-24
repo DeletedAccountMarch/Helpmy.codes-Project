@@ -1,0 +1,95 @@
+/*I have used different font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+}
+.container{
+    height: 70vh;
+    position:relative;
+    background-color: #000000;
+}
+.arrow{
+    position:absolute;
+    top:45%;
+    font-size: 20px;
+    border:1px rgb(255, 255, 255) solid;
+    padding: 6px 10px;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    width: 20px;
+    font-weight: 800;
+    border-radius: 60%;
+}
+.slide{
+    width: 100%;
+}
+
+
+#img{
+    width: 100%;
+    height: 70vh;
+    opacity: 0.4;
+}
+
+.divtext{
+    position: absolute;
+    top:30%;
+    text-align: center;
+    width: 100%;
+}
+.caption{
+    color:pink;
+    font-size: 45px;
+    font-weight: 800;
+}
+
+#desc{
+    font-size: 25px;
+    color:white;
+    font-weight: 800;
+}
+
+.left{
+    left:50px;
+}
+.right{
+    right:50px;
+}
+
+@media (max-width:850px){
+    .left{
+        left:10px;
+    }
+    .right{
+        right:10px;
+    }
+    #img{
+        width: 100%;
+        height: 40vh;
+    }
+    #desc{
+        top:50%;
+    }
+    .container{
+        height: 40vh;
+    }
+
+    .caption{
+        font-size: 25px;
+    }
+    .desc{
+        font-size: 15px;
+    }
+    
+    .arrow{
+        font-size: 20px;
+        padding: 3px 10px;
+        text-align: center;
+        width: 15px;
+        font-weight: 800;
+        border-radius: 70%;
+    }
+}

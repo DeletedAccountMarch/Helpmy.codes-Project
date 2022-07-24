@@ -1,0 +1,140 @@
+.divcompile{
+    padding: 11px;
+    background: rgb(255, 255, 255);
+    height: 80vh;
+}
+
+.compile_container{   
+    height: 78%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#entervalue{
+    margin-top:25px;
+ font-size: large;
+}
+
+#entervalue input{
+    width: 50%;
+    height: 27px;
+    padding: 4px;
+}
+
+
+#out , #first_text{
+    width: 95%;
+    height: 51vh;
+    padding:10px;
+    font-size: 20px;
+    background: black;
+    color:white;
+    border: none;
+    overflow: hidden;
+    resize: none;
+    overflow-y: scroll;
+}
+
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+
+.outputspace{
+    text-align: center;
+    margin-top:10px;
+    width: 100%;
+}
+
+.outputspace hr{
+    color:white;
+    margin-top:10px;
+    width: 100%!important;;
+}
+
+.run_btn{
+    cursor: pointer;
+    margin:10px;
+    padding:15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    border: none;
+    color:white;
+    align-items: center;
+    font-weight: 600;
+    background: rgb(5, 185, 14);
+}
+
+.options{
+    background: black;
+    width: 100%;
+    height: 70px;
+    
+    margin-bottom: 10px;
+    
+}
+
+.lefttop{
+    float:left;
+}
+.righttop{
+    float:right;
+}
+
+.left{
+    background: rgb(255, 255, 255);
+    float:left;
+    width: 60%;
+    
+}
+
+.right{
+    background: black;
+    float:right;
+    width: 39%;
+    color:white;
+}
+
+.code_field{
+    width: 95%;
+    background:black;
+    color:white;
+    height: 100%;
+    font-size: 20px;
+    padding: 15px;
+    resize: none;
+    overflow-y: scroll;
+    
+}
+
+textarea::-webkit-scrollbar {
+    width: 1em;
+}
+
+@media (max-width:956px){
+    
+    .right{
+        width: 100%;
+        display: block;
+        float:none !important;
+        position:relative;
+        top: 10px;
+    }
+    .left{
+        width: 100%;
+        display: block;
+        float:none !important;
+    }
+ 
+
+    #code{
+        height: 51vh;
+    }
+    .divcompile{
+        height: auto;
+    }
+}
